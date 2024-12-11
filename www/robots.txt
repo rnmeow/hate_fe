@@ -1,0 +1,4 @@
+Host: https://rnmeow.com
+
+User-agent: *
+Disallow: /404.html

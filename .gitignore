@@ -1,0 +1,13 @@
+node_modules
+dist
+
+logs
+*.log
+pnpm-debug.log*
+
+Caddyfile
+
+.env*
+.vscode
+
+.wrangler
