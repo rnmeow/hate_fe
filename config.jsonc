@@ -1,0 +1,13 @@
+{
+  "siteInfo": {
+    "title": "黑特南一中投稿站",
+    "description": "",
+    "url": "https://hate.tfcis.org",
+    "thumbUrl": "https://hate.tfcis.org/logo.png",
+  },
+  "footer": {
+    "year": 2024,
+    "holder": "台南一中資訊社",
+  },
+  "apiUrl": ["https://api.hate.tfcis.org"],
+}

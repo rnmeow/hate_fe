@@ -1,6 +1,7 @@
 import { resolve, dirname } from 'node:path'
 
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import { SubresourceIntegrityPlugin } from 'webpack-subresource-integrity'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import WebpackBar from 'webpackbar'
 import HtmlPlugin from 'html-webpack-plugin'
@@ -24,9 +25,10 @@ async function config(_env, argv) {
       webassemblyModuleFilename: '[contenthash].wasm',
       hashFunction: 'xxhash64',
       hashDigestLength: 12,
+      crossOriginLoading: 'anonymous',
     },
     resolve: {
-      extensions: ['.ts', '.tsx', '.js', '.css', '.json'],
+      extensions: ['.ts', '.tsx', '.js', '.css', '.json', 'jsonc'],
       extensionAlias: { '.js': ['.ts', '.js'] },
       cache: true,
       unsafeCache: false,
@@ -89,9 +91,10 @@ async function config(_env, argv) {
         inject: 'body',
         minify: {
           removeComments: false,
-          collapseWhitespace: true
+          collapseWhitespace: true,
         },
       }),
+      !isDevMode && new SubresourceIntegrityPlugin(),
       new CopyPlugin({
         patterns: ['www'],
       }),

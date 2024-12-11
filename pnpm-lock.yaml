@@ -69,6 +69,9 @@ importers:
       webpack-dev-server:
         specifier: ^5.1.0
         version: 5.1.0(webpack-cli@5.1.4)(webpack@5.95.0)
+      webpack-subresource-integrity:
+        specifier: 5.1.0
+        version: 5.1.0(html-webpack-plugin@5.6.0(webpack@5.95.0))(webpack@5.95.0)
       webpackbar:
         specifier: ^6.0.1
         version: 6.0.1(webpack@5.95.0)
@@ -2391,6 +2394,9 @@ packages:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
     engines: {node: '>= 0.6'}
 
+  typed-assert@1.0.9:
+    resolution: {integrity: sha512-KNNZtayBCtmnNmbo5mG47p1XsCyrx6iVqomjcZnec/1Y5GGARaxPs6r49RnSPeUP3YjNYiU9sQHAtY4BBvnZwg==}
+
   typescript@5.7.2:
     resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
@@ -2509,6 +2515,16 @@ packages:
   webpack-sources@3.2.3:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}
     engines: {node: '>=10.13.0'}
+
+  webpack-subresource-integrity@5.1.0:
+    resolution: {integrity: sha512-sacXoX+xd8r4WKsy9MvH/q/vBtEHr86cpImXwyg74pFIpERKt6FmB8cXpeuh0ZLgclOlHI4Wcll7+R5L02xk9Q==}
+    engines: {node: '>= 12'}
+    peerDependencies:
+      html-webpack-plugin: '>= 5.0.0-beta.1 < 6'
+      webpack: ^5.12.0
+    peerDependenciesMeta:
+      html-webpack-plugin:
+        optional: true
 
   webpack@5.95.0:
     resolution: {integrity: sha512-2t3XstrKULz41MNMBF+cJ97TyHdyQ8HCt//pqErqDvNjU9YQBnZxIHa11VXsi7F3mb5/aO2tuDxdeTPdU7xu9Q==}
@@ -4775,6 +4791,8 @@ snapshots:
       media-typer: 0.3.0
       mime-types: 2.1.35
 
+  typed-assert@1.0.9: {}
+
   typescript@5.7.2: {}
 
   ufo@1.5.4: {}
@@ -4921,6 +4939,13 @@ snapshots:
       source-map: 0.6.1
 
   webpack-sources@3.2.3: {}
+
+  webpack-subresource-integrity@5.1.0(html-webpack-plugin@5.6.0(webpack@5.95.0))(webpack@5.95.0):
+    dependencies:
+      typed-assert: 1.0.9
+      webpack: 5.95.0(esbuild@0.24.0)(webpack-cli@5.1.4)
+    optionalDependencies:
+      html-webpack-plugin: 5.6.0(webpack@5.95.0)
 
   webpack@5.95.0(esbuild@0.24.0)(webpack-cli@5.1.4):
     dependencies:

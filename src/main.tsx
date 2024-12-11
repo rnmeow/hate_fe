@@ -1,7 +1,7 @@
 import { h, render } from 'preact'
 import App from './App'
 
-const cont = document.getElementById('root1')
+const cont = document.getElementById('root')
 
 if (cont) {
   render(<App />, cont)
